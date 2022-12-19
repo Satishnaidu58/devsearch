@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  
+    <!-- Favicon -->
+    <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon" />
+    <!-- Icon - IconMonster -->
+    <link rel="stylesheet" href="https://cdn.iconmonstr.com/1.3.0/css/iconmonstr-iconic-font.min.css" />
+    <!-- Mumble UI -->
+    <link rel="stylesheet" href="{% static 'uikit/styles/uikit.css' %}" />
+    <!-- Dev Search UI -->
+    <link rel="stylesheet" href="{% static 'styles/app.css' %}" />
+
+    <!-- Our project just needs Font Awesome Free's Solid and Brand files -->
+    <link href="{% static 'fontawesomefree/css/fontawesome.css' %}" rel="stylesheet" type="text/css">
+    <link href="{% static 'fontawesomefree/css/brands.css' %}" rel="stylesheet" type="text/css">
+    <link href="{% static 'fontawesomefree/css/solid.css' %}" rel="stylesheet" type="text/css">
+
+    <!-- Our project just needs Font Awesome Free's Solid and Brand files -->
+    <script src="{% static 'fontawesomefree/js/fontawesome.js' %}"></script>
+    <script src="{% static 'fontawesomefree/js/solid.js' %}"></script>
+    <script src="{% static 'fontawesomefree/js/brands.js' %}"></script>
+
+
+<!-- Leetcode's icon -->
+    <script src="https://code.iconify.design/iconify-icon/1.0.1/iconify-icon.min.js"></script>  
+    <title>DevSearch - Connect with Developers!</title>
+</head>
+
+<body>
+    
+    {% include "navbar.html" %}
+
+    <!-- messages imported in template -->
+    {% if messages %}
+    <!-- looping over each msg -->
+    {% for message in messages %}
+        <div class="alert  alert--{{message.tags}}">
+            <p class="alert__message">{{message}}</p>
+            <button class="alert__close">x</button>
+        </div>
+    {% endfor %}
+    {% endif %}
+
+    {% block content %}
+
+    {% endblock content %}
+
+</body>
+<!-- importing js -->
+<script src="{% static 'uikit/app.js' %}"></script>
+<script src="{% static 'js/main.js' %}"></script>
+</html>
