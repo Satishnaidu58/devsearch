@@ -3,7 +3,7 @@
 - Tech Stack
   - Python 3.9
   - Django 3.2
-  -HTML (Templating)
+  - HTML (Templating)
   
 ## Description 
 Developers can show off their projects, skills, rate, review others’ projects, and
